@@ -1,0 +1,15 @@
+<main>
+        <app-dynamic-table
+            [data]="filteredPermissions"
+            [tableDefinition]="tableDefinition"
+            [borderRadius]="'0.5em'"
+            [useSorting]="useSorting"
+            [useFilters]="useFilters"
+            [useSelection]="useSelection"
+            [allowSelectAll]="allowSelectAll"
+            [customColumnComponents]="customComponents"
+            [updateSource]="tableUpdateSource.asObservable()"
+            [defaultSelectedRowIndexes]="defaultSelectedRowIndexes"
+            (selectionEvent)="selectionEvent.next($event)"
+        ></app-dynamic-table>
+</main>
